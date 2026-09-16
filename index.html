@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The creative portfolio of Faith Banquerigo, a video editor and graphic designer based in San Jose del Monte, Bulacan."
+    />
+    <meta name="theme-color" content="#160707" />
+    <title>Faith Banquerigo — Video Editor & Graphic Designer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="Faith Banquerigo, home">
+        <span>FB</span>
+        <span class="brand-name">Faith Banquerigo</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation" data-nav>
+        <a href="#about">About</a>
+        <a href="#work">Selected work</a>
+        <a href="#experience">Experience</a>
+        <a class="nav-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="hero-grain" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Video editor · Graphic designer</p>
+          <h1>I turn ideas into <em>visual stories.</em></h1>
+          <p class="hero-intro">
+            Clean edits, thoughtful design, and content made to hold attention—crafted by Faith Banquerigo in
+            Bulacan, Philippines.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="FAITH_BANQUERIGO_resume.pdf" target="_blank" rel="noreferrer">
+              View résumé <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="portrait-orbit" aria-hidden="true"></div>
+          <div class="portrait-card">
+            <img src="assets/faith-banquerigo.png" alt="Faith Banquerigo" />
+          </div>
+          <div class="status-card">
+            <span class="status-dot"></span>
+            <span>Open to creative opportunities</span>
+          </div>
+        </div>
+
+        <div class="hero-footer" aria-hidden="true">
+          <span>Portfolio / 2026</span>
+          <span class="hero-line"></span>
+          <span>Scroll to discover</span>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="section-label reveal"><span>01</span> About me</div>
+        <div class="about-grid">
+          <h2 class="reveal">Hello! I’m <span>Faith.</span></h2>
+          <div class="about-copy reveal">
+            <p class="lead">
+              I’m a creative and motivated college student passionate about transforming raw footage into videos
+              that feel engaging, clean, and visually compelling.
+            </p>
+            <p>
+              My approach brings storytelling and polish together through smooth cuts, captions, color correction,
+              audio editing, and simple motion graphics. I also create purposeful social and promotional designs.
+            </p>
+            <div class="tool-row" aria-label="Tools I use">
+              <span>CapCut</span><span>Canva</span><span>ElevenLabs</span><span>Pinterest</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span>01</span>
+            <h3>Video editing</h3>
+            <p>Story-led pacing, clean transitions, music, subtitles, and effects.</p>
+          </article>
+          <article class="skill-card reveal">
+            <span>02</span>
+            <h3>Graphic design</h3>
+            <p>Social posts, advertising creatives, posters, and editorial layouts.</p>
+          </article>
+          <article class="skill-card reveal">
+            <span>03</span>
+            <h3>Motion & polish</h3>
+            <p>Motion graphics, captions, basic color correction, and audio editing.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="work section" id="work">
+        <div class="section-heading reveal">
+          <div class="section-label"><span>02</span> Selected work</div>
+          <h2>A collection of <span>visual ideas.</span></h2>
+        </div>
+
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+          <button class="filter is-active" type="button" data-filter="all">All work</button>
+          <button class="filter" type="button" data-filter="social">Social</button>
+          <button class="filter" type="button" data-filter="advertising">Advertising</button>
+          <button class="filter" type="button" data-filter="magazine">Magazine</button>
+          <button class="filter" type="button" data-filter="poster">Posters</button>
+          <button class="filter" type="button" data-filter="church">Church</button>
+        </div>
+
+        <div class="gallery" data-gallery>
+          <button class="project-card tall reveal" type="button" data-category="social" data-title="Dessert Lip Tint" data-image="assets/work/social-01.png">
+            <img src="assets/work/social-01.png" alt="Pink dessert lip tint social media design" loading="lazy" />
+            <span class="project-meta"><strong>Dessert Lip Tint</strong><small>Social media design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="advertising" data-title="The Bigger Burger" data-image="assets/work/advertising-01.png">
+            <img src="assets/work/advertising-01.png" alt="Bigger Burger advertising design" loading="lazy" />
+            <span class="project-meta"><strong>The Bigger Burger</strong><small>Advertising design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="magazine" data-title="Luxe" data-image="assets/work/magazine-01.png">
+            <img src="assets/work/magazine-01.png" alt="Luxe fashion magazine cover" loading="lazy" />
+            <span class="project-meta"><strong>Luxe</strong><small>Magazine design</small></span>
+          </button>
+          <button class="project-card tall reveal" type="button" data-category="poster" data-title="The Soul" data-image="assets/work/poster-01.png">
+            <img src="assets/work/poster-01.png" alt="The Soul cinematic poster design" loading="lazy" />
+            <span class="project-meta"><strong>The Soul</strong><small>Poster design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="church" data-title="Pastor’s Month" data-image="assets/work/church-01.jpeg">
+            <img src="assets/work/church-01.jpeg" alt="Pastor's Month church event design" loading="lazy" />
+            <span class="project-meta"><strong>Pastor’s Month</strong><small>Church post design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="social" data-title="Modtal Lip Tint" data-image="assets/work/social-02.png">
+            <img src="assets/work/social-02.png" alt="Red lip tint product design" loading="lazy" />
+            <span class="project-meta"><strong>Modtal Lip Tint</strong><small>Social media design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="social" data-title="Pop’n Pink" data-image="assets/work/social-03.png">
+            <img src="assets/work/social-03.png" alt="Pop'n Pink cosmetic product design" loading="lazy" />
+            <span class="project-meta"><strong>Pop’n Pink</strong><small>Social media design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="advertising" data-title="Legacy Mocktails" data-image="assets/work/advertising-02.png">
+            <img src="assets/work/advertising-02.png" alt="Legacy Mocktails drink advertisement" loading="lazy" />
+            <span class="project-meta"><strong>Legacy Mocktails</strong><small>Advertising design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="magazine" data-title="Corazon" data-image="assets/work/magazine-02.png">
+            <img src="assets/work/magazine-02.png" alt="Corazon entertainment magazine cover" loading="lazy" />
+            <span class="project-meta"><strong>Corazon</strong><small>Magazine design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="poster" data-title="When Hearts Meet" data-image="assets/work/poster-02.png">
+            <img src="assets/work/poster-02.png" alt="When Hearts Meet movie poster" loading="lazy" />
+            <span class="project-meta"><strong>When Hearts Meet</strong><small>Poster design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="church" data-title="The Pursuit of His Presence" data-image="assets/work/church-02.jpeg">
+            <img src="assets/work/church-02.jpeg" alt="The Pursuit of His Presence church post" loading="lazy" />
+            <span class="project-meta"><strong>The Pursuit</strong><small>Church post design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="church" data-title="The Power of the Holy Spirit" data-image="assets/work/church-03.jpeg">
+            <img src="assets/work/church-03.jpeg" alt="The Power of the Holy Spirit church post" loading="lazy" />
+            <span class="project-meta"><strong>Holy Spirit</strong><small>Church post design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="social" data-title="Centella" data-image="assets/work/social-04.png">
+            <img src="assets/work/social-04.png" alt="Centella skin care social media design" loading="lazy" />
+            <span class="project-meta"><strong>Centella</strong><small>Social media design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="social" data-title="Pacifica Dream Shot" data-image="assets/work/social-05.png">
+            <img src="assets/work/social-05.png" alt="Pacifica Dream Shot purple product design" loading="lazy" />
+            <span class="project-meta"><strong>Dream Shot</strong><small>Social media design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="social" data-title="Kanbas Pure Essence" data-image="assets/work/social-06.png">
+            <img src="assets/work/social-06.png" alt="Kanbas Pure Essence skin care design" loading="lazy" />
+            <span class="project-meta"><strong>Pure Essence</strong><small>Social media design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="advertising" data-title="Coffee" data-image="assets/work/advertising-03.png">
+            <img src="assets/work/advertising-03.png" alt="Iced coffee advertising design" loading="lazy" />
+            <span class="project-meta"><strong>Coffee</strong><small>Advertising design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="magazine" data-title="About Me" data-image="assets/work/magazine-03.png">
+            <img src="assets/work/magazine-03.png" alt="About Me editorial magazine cover" loading="lazy" />
+            <span class="project-meta"><strong>About Me</strong><small>Magazine design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="poster" data-title="No One Gets Out" data-image="assets/work/poster-03.png">
+            <img src="assets/work/poster-03.png" alt="No One Gets Out thriller poster" loading="lazy" />
+            <span class="project-meta"><strong>No One Gets Out</strong><small>Poster design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="church" data-title="Shaped for Serving God" data-image="assets/work/church-04.jpeg">
+            <img src="assets/work/church-04.jpeg" alt="Shaped for Serving God church post" loading="lazy" />
+            <span class="project-meta"><strong>Shaped to Serve</strong><small>Church post design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="church" data-title="Patience in the Wilderness" data-image="assets/work/church-05.jpeg">
+            <img src="assets/work/church-05.jpeg" alt="Patience in the Wilderness church post" loading="lazy" />
+            <span class="project-meta"><strong>Patience</strong><small>Church post design</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="church" data-title="Living Spiritually" data-image="assets/work/church-06.jpeg">
+            <img src="assets/work/church-06.jpeg" alt="Are You Living Spiritually church post" loading="lazy" />
+            <span class="project-meta"><strong>Living Spiritually</strong><small>Church post design</small></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="experience section" id="experience">
+        <div class="section-label reveal"><span>03</span> Experience & education</div>
+        <div class="experience-grid">
+          <h2 class="reveal">Learning by <span>making.</span></h2>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <p class="timeline-type">Experience</p>
+              <h3>Church Media Department</h3>
+              <p>Edited church highlights and worship videos, created lyric videos and motion graphics, and designed event and social media creatives.</p>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <p class="timeline-type">Creative practice</p>
+              <h3>School Projects</h3>
+              <p>Edited presentations and promotional content with transitions, subtitles, music, and effects while collaborating on creative video projects.</p>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <p class="timeline-type">Education · Present</p>
+              <h3>STI College San Jose del Monte</h3>
+              <p>Bachelor of Science in Business Administration, major in Operations Management.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <p class="eyebrow reveal"><span></span> Have a project in mind?</p>
+        <h2 class="reveal">Let’s make something <em>worth watching.</em></h2>
+        <a class="contact-email reveal" href="mailto:banquerigofaye12@gmail.com">
+          banquerigofaye12@gmail.com <span aria-hidden="true">↗</span>
+        </a>
+        <div class="contact-details reveal">
+          <a href="tel:+639917266400">+63 991 726 6400</a>
+          <span>San Jose del Monte, Bulacan, Philippines</span>
+          <span>Tagalog · English</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span data-year></span> Faith Banquerigo</span>
+      <a href="#home">Back to top ↑</a>
+    </footer>
+
+    <dialog class="lightbox" data-lightbox>
+      <button type="button" class="lightbox-close" aria-label="Close preview" data-lightbox-close>×</button>
+      <img src="" alt="" data-lightbox-image />
+      <p data-lightbox-title></p>
+    </dialog>
+  </body>
+</html>
