@@ -138,9 +138,12 @@ img { display: block; max-width: 100%; }
 .project-card { position: relative; aspect-ratio: 4 / 5; padding: 0; background: #2a1515; border: 0; overflow: hidden; cursor: zoom-in; text-align: left; }
 .project-card.tall { grid-row: span 2; aspect-ratio: auto; }
 .project-card::after { content: "↗"; position: absolute; top: 16px; right: 16px; display: grid; width: 38px; aspect-ratio: 1; place-items: center; color: #181010; background: #fff; border-radius: 50%; opacity: 0; transform: translateY(8px); transition: .25s; }
-.project-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.7,.2,1), filter .3s; }
-.project-card:hover img { transform: scale(1.045); filter: brightness(.72); }
+.project-card img, .project-card > video { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.7,.2,1), filter .3s; }
+.project-card:hover img, .project-card:hover > video { transform: scale(1.045); filter: brightness(.72); }
 .project-card:hover::after { opacity: 1; transform: none; }
+.project-card-video::after { content: none; }
+.play-badge { position: absolute; inset: 50% auto auto 50%; z-index: 1; display: grid; width: 52px; aspect-ratio: 1; place-items: center; padding-left: 3px; color: #160707; background: rgba(255,255,255,.92); border-radius: 50%; box-shadow: 0 8px 30px rgba(0,0,0,.28); transform: translate(-50%, -50%); transition: transform .25s, background .25s; }
+.project-card-video:hover .play-badge, .project-card-video:focus-visible .play-badge { background: #fff; transform: translate(-50%, -50%) scale(1.08); }
 .project-meta { position: absolute; inset: auto 0 0; display: flex; flex-direction: column; padding: 55px 18px 18px; color: #fff; background: linear-gradient(transparent, rgba(8,3,3,.86)); opacity: 0; transform: translateY(8px); transition: .25s; }
 .project-card:hover .project-meta, .project-card:focus-visible .project-meta { opacity: 1; transform: none; }
 .project-meta strong { font-size: .95rem; }
@@ -168,7 +171,10 @@ footer a { text-decoration: none; }
 
 .lightbox { width: min(90vw, 900px); height: min(90vh, 960px); padding: 0; color: #fff; background: transparent; border: 0; overflow: visible; }
 .lightbox::backdrop { background: rgba(8,3,3,.93); backdrop-filter: blur(8px); }
-.lightbox img { width: 100%; height: calc(100% - 42px); object-fit: contain; }
+.lightbox img, .lightbox video { width: 100%; height: calc(100% - 42px); object-fit: contain; }
+.lightbox video { display: none; background: #000; }
+.lightbox.is-video img { display: none; }
+.lightbox.is-video video { display: block; }
 .lightbox p { margin: 13px 0 0; text-align: center; font-size: .8rem; }
 .lightbox-close { position: fixed; top: 20px; right: 24px; z-index: 2; width: 44px; height: 44px; color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.3); border-radius: 50%; cursor: pointer; font-size: 1.8rem; line-height: 1; }
 

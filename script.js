@@ -5,6 +5,7 @@ const filterButtons = document.querySelectorAll('[data-filter]');
 const cards = document.querySelectorAll('.project-card');
 const lightbox = document.querySelector('[data-lightbox]');
 const lightboxImage = document.querySelector('[data-lightbox-image]');
+const lightboxVideo = document.querySelector('[data-lightbox-video]');
 const lightboxTitle = document.querySelector('[data-lightbox-title]');
 
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
@@ -43,16 +44,36 @@ filterButtons.forEach((button) => {
 
 cards.forEach((card) => {
   card.addEventListener('click', () => {
-    lightboxImage.src = card.dataset.image;
-    lightboxImage.alt = card.querySelector('img').alt;
+    const isVideo = Boolean(card.dataset.video);
+    lightbox.classList.toggle('is-video', isVideo);
+
+    if (isVideo) {
+      lightboxVideo.src = card.dataset.video;
+      lightboxVideo.load();
+    } else {
+      lightboxImage.src = card.dataset.image;
+      lightboxImage.alt = card.querySelector('img').alt;
+    }
+
     lightboxTitle.textContent = card.dataset.title;
     lightbox.showModal();
+
+    if (isVideo) lightboxVideo.play().catch(() => {});
   });
 });
 
-document.querySelector('[data-lightbox-close]').addEventListener('click', () => lightbox.close());
+const closeLightbox = () => lightbox.close();
+
+document.querySelector('[data-lightbox-close]').addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', (event) => {
-  if (event.target === lightbox) lightbox.close();
+  if (event.target === lightbox) closeLightbox();
+});
+lightbox.addEventListener('close', () => {
+  lightboxVideo.pause();
+  lightboxVideo.removeAttribute('src');
+  lightboxVideo.load();
+  lightboxImage.removeAttribute('src');
+  lightbox.classList.remove('is-video');
 });
 
 const observer = new IntersectionObserver(

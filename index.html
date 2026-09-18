@@ -113,6 +113,7 @@
 
         <div class="filter-bar reveal" role="group" aria-label="Filter projects">
           <button class="filter is-active" type="button" data-filter="all">All work</button>
+          <button class="filter" type="button" data-filter="video">Videos</button>
           <button class="filter" type="button" data-filter="social">Social</button>
           <button class="filter" type="button" data-filter="advertising">Advertising</button>
           <button class="filter" type="button" data-filter="magazine">Magazine</button>
@@ -121,6 +122,45 @@
         </div>
 
         <div class="gallery" data-gallery>
+          <button class="project-card project-card-video reveal" type="button" data-category="video" data-title="Church Reels" data-video="assets/videos/CHURCH REELS.mp4" aria-label="Play Church Reels video">
+            <video src="assets/videos/CHURCH REELS.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+            <span class="play-badge" aria-hidden="true">&#9654;</span>
+            <span class="project-meta"><strong>Church Reels</strong><small>Video editing</small></span>
+          </button>
+          <button class="project-card project-card-video reveal" type="button" data-category="video" data-title="Mini Vlog" data-video="assets/videos/Mini vlog.mp4" aria-label="Play Mini Vlog video">
+            <video src="assets/videos/Mini vlog.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+            <span class="play-badge" aria-hidden="true">&#9654;</span>
+            <span class="project-meta"><strong>Mini Vlog</strong><small>Short-form video</small></span>
+          </button>
+          <button class="project-card project-card-video reveal" type="button" data-category="video" data-title="AI Podcast" data-video="assets/videos/PODCAST AI .mp4" aria-label="Play AI Podcast video">
+            <video src="assets/videos/PODCAST AI .mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+            <span class="play-badge" aria-hidden="true">&#9654;</span>
+            <span class="project-meta"><strong>AI Podcast</strong><small>AI-assisted edit</small></span>
+          </button>
+          <button class="project-card project-card-video reveal" type="button" data-category="video" data-title="Shoes Affiliate AI" data-video="assets/videos/Shoes affiliate AI.mp4" aria-label="Play Shoes Affiliate AI video">
+            <video src="assets/videos/Shoes affiliate AI.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+            <span class="play-badge" aria-hidden="true">&#9654;</span>
+            <span class="project-meta"><strong>Shoes Affiliate AI</strong><small>Affiliate video</small></span>
+          </button>
+          <button class="project-card project-card-video reveal" type="button" data-category="video" data-title="Simbarkada" data-video="assets/videos/SIMBARKADA_.mp4" aria-label="Play Simbarkada video">
+            <video src="assets/videos/SIMBARKADA_.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+            <span class="play-badge" aria-hidden="true">&#9654;</span>
+            <span class="project-meta"><strong>Simbarkada</strong><small>Creative video edit</small></span>
+          </button>
+          <button class="project-card project-card-video reveal" type="button" data-category="video" data-title="Social Media Reels" data-video="assets/videos/Social media reels.mp4" aria-label="Play Social Media Reels video">
+            <video src="assets/videos/Social media reels.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+            <span class="play-badge" aria-hidden="true">&#9654;</span>
+            <span class="project-meta"><strong>Social Media Reels</strong><small>Short-form content</small></span>
+          </button>
+          <button class="project-card project-card-video reveal" type="button" data-category="video" data-title="Wedding Film" data-video="assets/videos/wedding_.mp4" aria-label="Play Wedding Film video">
+            <video src="assets/videos/wedding_.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+            <span class="play-badge" aria-hidden="true">&#9654;</span>
+            <span class="project-meta"><strong>Wedding Film</strong><small>Event video</small></span>
+          </button>
+          <button class="project-card reveal" type="button" data-category="video" data-title="Training Certificate" data-image="assets/videos/Training certificate_.png">
+            <img src="assets/videos/Training certificate_.png" alt="Training certificate earned by Faith Banquerigo" loading="lazy" />
+            <span class="project-meta"><strong>Training Certificate</strong><small>Professional development</small></span>
+          </button>
           <button class="project-card tall reveal" type="button" data-category="social" data-title="Dessert Lip Tint" data-image="assets/work/social-01.png">
             <img src="assets/work/social-01.png" alt="Pink dessert lip tint social media design" loading="lazy" />
             <span class="project-meta"><strong>Dessert Lip Tint</strong><small>Social media design</small></span>
@@ -257,6 +297,7 @@
     <dialog class="lightbox" data-lightbox>
       <button type="button" class="lightbox-close" aria-label="Close preview" data-lightbox-close>×</button>
       <img src="" alt="" data-lightbox-image />
+      <video controls playsinline data-lightbox-video aria-label="Video preview"></video>
       <p data-lightbox-title></p>
     </dialog>
   </body>
