@@ -67,51 +67,12 @@
         </div>
       </section>
 
-      <section class="about section" id="about">
-        <div class="section-label reveal"><span>01</span> About me</div>
-        <div class="about-grid">
-          <h2 class="reveal">Hello! I’m <span>Faith.</span></h2>
-          <div class="about-copy reveal">
-            <p class="lead">
-              I’m a creative and motivated college student passionate about transforming raw footage into videos
-              that feel engaging, clean, and visually compelling.
-            </p>
-            <p>
-              My approach brings storytelling and polish together through smooth cuts, captions, color correction,
-              audio editing, and simple motion graphics. I also create purposeful social and promotional designs.
-            </p>
-            <div class="tool-row" aria-label="Tools I use">
-              <span>CapCut</span><span>Canva</span><span>ElevenLabs</span><span>Pinterest</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-            <span>01</span>
-            <h3>Video editing</h3>
-            <p>Story-led pacing, clean transitions, music, subtitles, and effects.</p>
-          </article>
-          <article class="skill-card reveal">
-            <span>02</span>
-            <h3>Graphic design</h3>
-            <p>Social posts, advertising creatives, posters, and editorial layouts.</p>
-          </article>
-          <article class="skill-card reveal">
-            <span>03</span>
-            <h3>Motion & polish</h3>
-            <p>Motion graphics, captions, basic color correction, and audio editing.</p>
-          </article>
-        </div>
-      </section>
-
       <section class="work section" id="work">
         <div class="section-heading reveal">
-          <div class="section-label"><span>02</span> Selected work</div>
-          <h2>A collection of <span>visual ideas.</span></h2>
+          <h2>Graphics <span>design.</span></h2>
         </div>
 
-        <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects" data-filter-bar hidden>
           <button class="filter is-active" type="button" data-filter="all">All work</button>
           <button class="filter" type="button" data-filter="video">Videos</button>
           <button class="filter" type="button" data-filter="social">Social</button>
@@ -161,17 +122,27 @@
             <img src="assets/videos/Training certificate_.png" alt="Training certificate earned by Faith Banquerigo" loading="lazy" />
             <span class="project-meta"><strong>Training Certificate</strong><small>Professional development</small></span>
           </button>
-          <button class="project-card tall reveal" type="button" data-category="social" data-title="Dessert Lip Tint" data-image="assets/work/social-01.png">
+          <button class="project-card tall reveal" type="button" data-category="social" data-title="Dessert Lip Tint" data-image="assets/work/social-01.png" data-highlight>
             <img src="assets/work/social-01.png" alt="Pink dessert lip tint social media design" loading="lazy" />
-            <span class="project-meta"><strong>Dessert Lip Tint</strong><small>Social media design</small></span>
+            <span class="project-meta">
+              <strong>Dessert Lip Tint</strong>
+              <small>Social media design</small>
+              <span class="project-summary">Playful product creative designed to help a beauty brand stand out in the feed.</span>
+              <span class="project-link">View project <span aria-hidden="true">&rarr;</span></span>
+            </span>
           </button>
           <button class="project-card reveal" type="button" data-category="advertising" data-title="The Bigger Burger" data-image="assets/work/advertising-01.png">
             <img src="assets/work/advertising-01.png" alt="Bigger Burger advertising design" loading="lazy" />
             <span class="project-meta"><strong>The Bigger Burger</strong><small>Advertising design</small></span>
           </button>
-          <button class="project-card reveal" type="button" data-category="magazine" data-title="Luxe" data-image="assets/work/magazine-01.png">
+          <button class="project-card reveal" type="button" data-category="magazine" data-title="Luxe" data-image="assets/work/magazine-01.png" data-highlight>
             <img src="assets/work/magazine-01.png" alt="Luxe fashion magazine cover" loading="lazy" />
-            <span class="project-meta"><strong>Luxe</strong><small>Magazine design</small></span>
+            <span class="project-meta">
+              <strong>Luxe</strong>
+              <small>Editorial design</small>
+              <span class="project-summary">A polished fashion cover balancing strong typography with an elegant editorial mood.</span>
+              <span class="project-link">View project <span aria-hidden="true">&rarr;</span></span>
+            </span>
           </button>
           <button class="project-card tall reveal" type="button" data-category="poster" data-title="The Soul" data-image="assets/work/poster-01.png">
             <img src="assets/work/poster-01.png" alt="The Soul cinematic poster design" loading="lazy" />
@@ -197,9 +168,14 @@
             <img src="assets/work/magazine-02.png" alt="Corazon entertainment magazine cover" loading="lazy" />
             <span class="project-meta"><strong>Corazon</strong><small>Magazine design</small></span>
           </button>
-          <button class="project-card reveal" type="button" data-category="poster" data-title="When Hearts Meet" data-image="assets/work/poster-02.png">
+          <button class="project-card reveal" type="button" data-category="poster" data-title="When Hearts Meet" data-image="assets/work/poster-02.png" data-highlight>
             <img src="assets/work/poster-02.png" alt="When Hearts Meet movie poster" loading="lazy" />
-            <span class="project-meta"><strong>When Hearts Meet</strong><small>Poster design</small></span>
+            <span class="project-meta">
+              <strong>When Hearts Meet</strong>
+              <small>Poster design</small>
+              <span class="project-summary">A cinematic romance poster created to communicate emotion at first glance.</span>
+              <span class="project-link">View project <span aria-hidden="true">&rarr;</span></span>
+            </span>
           </button>
           <button class="project-card reveal" type="button" data-category="church" data-title="The Pursuit of His Presence" data-image="assets/work/church-02.jpeg">
             <img src="assets/work/church-02.jpeg" alt="The Pursuit of His Presence church post" loading="lazy" />
@@ -246,6 +222,17 @@
             <span class="project-meta"><strong>Living Spiritually</strong><small>Church post design</small></span>
           </button>
         </div>
+
+        <div class="gallery-controls reveal">
+          <button class="button gallery-see-all" type="button" data-see-all>
+            See all work <span aria-hidden="true">&rarr;</span>
+          </button>
+          <nav class="gallery-pagination" data-pagination aria-label="Project pages" hidden>
+            <button class="pagination-button" type="button" data-page-prev aria-label="Previous project page">&larr;</button>
+            <span data-page-status aria-live="polite">Page 1 of 1</span>
+            <button class="pagination-button" type="button" data-page-next aria-label="Next project page">&rarr;</button>
+          </nav>
+        </div>
       </section>
 
       <section class="experience section" id="experience">
@@ -275,11 +262,49 @@
         </div>
       </section>
 
+      <section class="about section" id="about">
+        <div class="section-label reveal"><span>01</span> About me</div>
+        <div class="about-grid">
+          <h2 class="reveal">Hello! I’m <span>Faith.</span></h2>
+          <div class="about-copy reveal">
+            <p class="lead">
+              I’m a creative and motivated college student passionate about transforming raw footage into videos
+              that feel engaging, clean, and visually compelling.
+            </p>
+            <p>
+              My approach brings storytelling and polish together through smooth cuts, captions, color correction,
+              audio editing, and simple motion graphics. I also create purposeful social and promotional designs.
+            </p>
+            <div class="tool-row" aria-label="Tools I use">
+              <span>CapCut</span><span>Canva</span><span>ElevenLabs</span><span>Pinterest</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span>01</span>
+            <h3>Video editing</h3>
+            <p>Story-led pacing, clean transitions, music, subtitles, and effects.</p>
+          </article>
+          <article class="skill-card reveal">
+            <span>02</span>
+            <h3>Graphic design</h3>
+            <p>Social posts, advertising creatives, posters, and editorial layouts.</p>
+          </article>
+          <article class="skill-card reveal">
+            <span>03</span>
+            <h3>Motion & polish</h3>
+            <p>Motion graphics, captions, basic color correction, and audio editing.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="contact section" id="contact">
         <p class="eyebrow reveal"><span></span> Have a project in mind?</p>
         <h2 class="reveal">Let’s make something <em>worth watching.</em></h2>
-        <a class="contact-email reveal" href="mailto:banquerigofaye12@gmail.com">
-          banquerigofaye12@gmail.com <span aria-hidden="true">↗</span>
+        <a class="contact-email reveal" href="mailto:digitalfaye7@gmail.com">
+          digitalfaye7@gmail.com <span aria-hidden="true">↗</span>
         </a>
         <div class="contact-details reveal">
           <a href="tel:+639917266400">+63 991 726 6400</a>

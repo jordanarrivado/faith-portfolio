@@ -3,6 +3,13 @@ const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
 const filterButtons = document.querySelectorAll('[data-filter]');
 const cards = document.querySelectorAll('.project-card');
+const gallery = document.querySelector('[data-gallery]');
+const filterBar = document.querySelector('[data-filter-bar]');
+const seeAllButton = document.querySelector('[data-see-all]');
+const pagination = document.querySelector('[data-pagination]');
+const previousPageButton = document.querySelector('[data-page-prev]');
+const nextPageButton = document.querySelector('[data-page-next]');
+const pageStatus = document.querySelector('[data-page-status]');
 const lightbox = document.querySelector('[data-lightbox]');
 const lightboxImage = document.querySelector('[data-lightbox-image]');
 const lightboxVideo = document.querySelector('[data-lightbox-video]');
@@ -31,16 +38,63 @@ nav.querySelectorAll('a').forEach((link) => {
   });
 });
 
+const projectsPerPage = 8;
+let activeFilter = 'all';
+let currentPage = 1;
+let showingAllProjects = false;
+
+const renderProjects = () => {
+  const filteredCards = [...cards].filter(
+    (card) => activeFilter === 'all' || card.dataset.category === activeFilter,
+  );
+  const pageCount = Math.max(1, Math.ceil(filteredCards.length / projectsPerPage));
+  currentPage = Math.min(currentPage, pageCount);
+  const visiblePage = filteredCards.slice(
+    (currentPage - 1) * projectsPerPage,
+    currentPage * projectsPerPage,
+  );
+
+  cards.forEach((card) => {
+    const visible = showingAllProjects
+      ? visiblePage.includes(card)
+      : card.hasAttribute('data-highlight');
+    card.classList.toggle('is-hidden', !visible);
+  });
+
+  gallery.classList.toggle('is-highlights', !showingAllProjects);
+  filterBar.hidden = !showingAllProjects;
+  seeAllButton.hidden = showingAllProjects;
+  pagination.hidden = !showingAllProjects || pageCount <= 1;
+  pageStatus.textContent = `Page ${currentPage} of ${pageCount}`;
+  previousPageButton.disabled = currentPage === 1;
+  nextPageButton.disabled = currentPage === pageCount;
+};
+
+const showProjectPage = (page) => {
+  currentPage = page;
+  renderProjects();
+  gallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    const filter = button.dataset.filter;
+    activeFilter = button.dataset.filter;
+    currentPage = 1;
     filterButtons.forEach((item) => item.classList.toggle('is-active', item === button));
-    cards.forEach((card) => {
-      const visible = filter === 'all' || card.dataset.category === filter;
-      card.classList.toggle('is-hidden', !visible);
-    });
+    renderProjects();
   });
 });
+
+seeAllButton.addEventListener('click', () => {
+  showingAllProjects = true;
+  currentPage = 1;
+  renderProjects();
+});
+
+previousPageButton.addEventListener('click', () => showProjectPage(currentPage - 1));
+nextPageButton.addEventListener('click', () => showProjectPage(currentPage + 1));
+
+renderProjects();
 
 cards.forEach((card) => {
   card.addEventListener('click', () => {
